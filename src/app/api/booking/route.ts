@@ -97,17 +97,17 @@ export async function POST(request: Request) {
     const ticketTypes = {
       standard: {
         name: 'Standard Experience',
-        price: 129.00,
+        price: 60.00,
         description: 'Full luau experience with dinner and show'
       },
       vip: {
         name: 'VIP Experience',
-        price: 179.00,
+        price: 90.00,
         description: 'Premium seating, welcome drink, and photo opportunity with performers'
       },
       family: {
         name: 'Family Package',
-        price: 399.00,
+        price: 180.00,
         description: '2 adults and 2 children (ages 5-12)'
       }
     };

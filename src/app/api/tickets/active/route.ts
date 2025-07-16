@@ -12,7 +12,7 @@ export async function GET(request: NextRequest) {
         id: 'default',
         name: 'General Admission',
         description: 'Standard entry ticket',
-        price: 25.00,
+        price: 60.00,
         order: 1,
         isActive: true
       });

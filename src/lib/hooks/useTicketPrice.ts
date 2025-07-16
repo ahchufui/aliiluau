@@ -46,7 +46,7 @@ export function useTicketPrice() {
         
         // Set default price if all else fails
         setTicketPrice({
-          price: 25
+          price: 60
         });
       } catch (error) {
         console.error('Error in ticket price handling:', error);
@@ -54,7 +54,7 @@ export function useTicketPrice() {
         
         // Set default price if there's an error
         setTicketPrice({
-          price: 25.00
+          price: 60.00
         });
       } finally {
         setIsLoading(false);
