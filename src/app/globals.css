@@ -1,0 +1,83 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --foreground-rgb: 0, 0, 0;
+  --background-start-rgb: 255, 255, 255;
+  --background-end-rgb: 255, 255, 255;
+  
+  /* Polynesian-inspired color palette */
+  --primary-color: #006064; /* Deep teal - inspired by Polynesian waters */
+  --primary-dark: #00363a;
+  --primary-light: #428e92;
+  --secondary-color: #d84315; /* Warm terracotta - like Polynesian pottery */
+  --secondary-dark: #9f0000;
+  --secondary-light: #ff7543;
+  --accent-color: #795548; /* Rich wood brown - like Polynesian carvings */
+  --accent-dark: #4b2c20;
+  --accent-light: #a98274;
+  --natural-light: #f5f5f5;
+  --natural-medium: #e0e0e0;
+  --natural-dark: #263238;
+  --highlight: #ffc107; /* Golden yellow - like tropical flowers */
+  --highlight-dark: #c79100;
+  --highlight-light: #fff350;
+  --leaf-green: #2e7d32; /* Lush tropical green */
+  --leaf-light: #60ad5e;
+  --sand-light: #fff8e1;
+  --sand-dark: #cbba83;
+  
+  /* Text colors with better contrast */
+  --text-light: #f5f5f5;
+  --text-medium: #bdbdbd;
+  --text-dark: #212121;
+  --text-on-dark: #ffffff;
+  --text-on-light: #212121;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --foreground-rgb: 255, 255, 255;
+    --background-start-rgb: 23, 37, 84;
+    --background-end-rgb: 30, 41, 59;
+  }
+}
+
+body {
+  color: var(--text-dark);
+  font-family: 'Poppins', sans-serif;
+  background-color: var(--natural-light);
+}
+
+@layer components {
+  .container-custom {
+    @apply container mx-auto px-4 sm:px-6 lg:px-8;
+  }
+  
+  .btn-primary {
+    @apply bg-[color:var(--primary-color)] text-white py-2 px-6 rounded-md font-medium hover:opacity-80 transition-colors inline-block;
+  }
+  
+  .btn-secondary {
+    @apply bg-[color:var(--secondary-color)] text-white py-2 px-6 rounded-md font-medium hover:opacity-80 transition-colors inline-block;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl font-heading font-bold mb-6 text-[color:var(--primary-color)];
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-heading font-medium mb-4 text-[color:var(--secondary-color)];
+  }
+  
+  .gradient-bg-primary {
+    @apply bg-gradient-to-r from-[color:var(--primary-color)] to-[color:var(--primary-dark)];
+    background-image: linear-gradient(to right, var(--primary-color), var(--primary-dark)), url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+  
+  .gradient-bg-secondary {
+    @apply bg-gradient-to-r from-[color:var(--secondary-color)] to-[color:var(--secondary-dark)];
+    background-image: linear-gradient(to right, var(--secondary-color), var(--secondary-dark)), url("data:image/svg+xml,%3Csvg width='52' height='26' viewBox='0 0 52 26' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.1'%3E%3Cpath d='M10 10c0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6h2c0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4 3.314 0 6 2.686 6 6 0 2.21 1.79 4 4 4v2c-3.314 0-6-2.686-6-6 0-2.21-1.79-4-4-4-3.314 0-6-2.686-6-6zm25.464-1.95l8.486 8.486-1.414 1.414-8.486-8.486 1.414-1.414z' /%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+  }
+}
