@@ -4,8 +4,8 @@ import type { Metadata } from 'next';
 import SharedLayout from '@/components/SharedLayout';
 
 export const metadata: Metadata = {
-  title: 'The Experience | AliʻiLuau - Authentic Hawaiian Luau Experience',
-  description: 'Discover what makes our authentic Hawaiian luau special - from traditional food preparation to Polynesian dance performances and cultural demonstrations.',
+  title: 'The Experience | AliʻiLuau - Authentic Polynesian Luau Experience',
+  description: 'Discover what makes our authentic Polynesian luau special - from traditional food preparation to Polynesian dance performances and cultural demonstrations.',
 };
 
 export default function ExperiencePage() {
@@ -32,16 +32,15 @@ export default function ExperiencePage() {
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="max-w-3xl mx-auto text-center">
-            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-teal">A Celebration of Hawaiian Culture</h2>
+            <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-teal">A Celebration of Polynesian Culture</h2>
             <p className="mb-6">
               At AliʻiLuau, we offer more than just a dinner show—we provide an immersive journey into 
-              Hawaiian culture and traditions. From the moment you arrive, you'll be welcomed with the 
-              warm spirit of aloha that Hawaii is famous for.
+              Polynesian culture and traditions. From the moment you arrive, you'll be welcomed with the 
+              warm spirit of aloha that Polynesia is famous for.
             </p>
             <p className="mb-6">
               Our luau experience combines delicious traditional cuisine, captivating performances, 
-              interactive cultural demonstrations, and the breathtaking natural beauty of our oceanfront 
-              location to create an unforgettable evening that honors the rich heritage of the Hawaiian islands.
+              interactive cultural demonstrations to create an unforgettable evening that honors the rich heritage of the Pacific islands.
             </p>
           </div>
         </div>
@@ -55,15 +54,15 @@ export default function ExperiencePage() {
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-teal">Traditional Welcome</h2>
               <p className="mb-4">
                 Your evening begins with a traditional Hawaiian greeting as you're presented with a 
-                fresh flower lei and welcomed with the sound of the conch shell (pū).
+                fresh flower lei and a tradition welcome to country.
               </p>
               <p className="mb-4">
-                As you enter our beautiful oceanfront grounds, you'll be invited to participate in 
-                various pre-dinner activities that offer a glimpse into daily life in ancient Hawaii.
+                As you enter our beautiful grounds, you'll be invited to participate in 
+                various pre-dinner activities that offer a glimpse into daily life in ancient Polynesia and Pacific Islands.
               </p>
               <p className="mb-4">
-                Try your hand at traditional Hawaiian games, learn basic hula steps, or watch artisans 
-                demonstrate traditional crafts such as lei-making, coconut husking, and tapa cloth creation.
+                Try your hand at traditional Polynesian games, learn basic hula steps, or watch artisans 
+                demonstrate traditional crafts such as weaving, coconut husking, and other Polynesian traditions.
               </p>
             </div>
             <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
@@ -87,23 +86,22 @@ export default function ExperiencePage() {
               ></div>
             </div>
             <div className="order-1 md:order-2">
-              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-teal">The Royal Feast</h2>
-              <p className="mb-4">
+              <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-teal">Traditional Cooking</h2>
+              {/*<p className="mb-4">
                 The centerpiece of any luau is the feast, and ours features a lavish buffet of 
                 traditional Hawaiian dishes prepared using authentic methods.
-              </p>
+              </p>*/}
               <p className="mb-4">
-                Witness the unveiling of our imu, the underground oven where our kalua pig has been 
-                slow-roasting all day, wrapped in ti leaves and cooked to tender perfection.
+                Witness the unveiling of our umu.
               </p>
-              <p className="mb-4">
+              {/*<p className="mb-4">
                 Our menu includes Hawaiian favorites such as lomi lomi salmon, poi, haupia (coconut pudding), 
                 fresh tropical fruits, and much more. Vegetarian and special dietary options are always available.
-              </p>
-              <p className="mb-4">
+              </p>*/}
+              {/*<p className="mb-4">
                 Throughout your meal, enjoy tropical cocktails including our signature Mai Tai, as well as 
                 non-alcoholic options featuring fresh island fruits.
-              </p>
+              </p>*/}
             </div>
           </div>
         </div>

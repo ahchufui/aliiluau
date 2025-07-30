@@ -35,10 +35,22 @@ export default function Header() {
       <div className="absolute top-0 left-0 right-0 h-1 bg-[color:var(--secondary-color)]" />
       
       <div className="container-custom flex justify-between items-center">
-        {/* Logo with Polynesian styling */}
+        {/* Logo */}
         <Link href="/" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
-          <div className="w-12 h-12 rounded-full overflow-hidden bg-[color:var(--accent-color)] flex items-center justify-center border-2 border-[color:var(--secondary-light)] shadow-md">
-            <span className="text-white font-bold text-lg">AL</span>
+          <div className="h-12 w-12 relative flex-shrink-0 overflow-hidden">
+            <div 
+              style={{
+                width: '100%',
+                height: '100%',
+                backgroundImage: 'url("/logo.png")',
+                backgroundSize: 'contain',
+                backgroundPosition: 'center',
+                backgroundRepeat: 'no-repeat',
+                display: 'block'
+              }}
+              role="img"
+              aria-label="AliʻiLuau Logo"
+            ></div>
           </div>
           <span className="font-bold text-2xl text-[color:var(--primary-dark)]">
             AliʻiLuau
@@ -51,8 +63,6 @@ export default function Header() {
           {[
             { name: 'Home', href: '/' },
             { name: 'About', href: '/about' },
-            { name: 'Experience', href: '/experience' },
-            { name: 'Menu', href: '/menu' },
             { name: 'Gallery', href: '/gallery' },
             { name: 'Contact', href: '/contact' },
           ].map((link) => (
@@ -114,8 +124,6 @@ export default function Header() {
               {[
                 { name: 'Home', href: '/' },
                 { name: 'About', href: '/about' },
-                { name: 'Experience', href: '/experience' },
-                { name: 'Menu', href: '/menu' },
                 { name: 'Gallery', href: '/gallery' },
                 { name: 'Contact', href: '/contact' },
               ].map((item) => (

@@ -32,7 +32,7 @@ export default function Footer() {
               </h3>
             </div>
             <p className="mb-6 text-[color:var(--text-light)] opacity-90">
-              Experience the magic of Hawaii through authentic food, music, and dance at our traditional luau.
+              Experience the magic of Polynesia and the Pacific through authentic food, music, and dance at our traditional luau.
             </p>
             <div className="flex space-x-3">
               {/* Social Media Icons with Polynesian styling */}
@@ -80,16 +80,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/experience" className="text-[color:var(--text-light)] hover:text-[color:var(--secondary-color)] transition-colors flex items-center">
+                {/* <Link href="/experience" className="text-[color:var(--text-light)] hover:text-[color:var(--secondary-color)] transition-colors flex items-center">
                   <span className="text-[color:var(--secondary-light)] mr-2">›</span>
                   The Experience
-                </Link>
+                </Link> */}
               </li>
               <li>
-                <Link href="/menu" className="text-[color:var(--text-light)] hover:text-[color:var(--secondary-color)] transition-colors flex items-center">
+                {/* <Link href="/menu" className="text-[color:var(--text-light)] hover:text-[color:var(--secondary-color)] transition-colors flex items-center">
                   <span className="text-[color:var(--secondary-light)] mr-2">›</span>
                   Menu
-                </Link>
+                </Link> */}
               </li>
               <li>
                 <Link href="/gallery" className="text-[color:var(--text-light)] hover:text-[color:var(--secondary-color)] transition-colors flex items-center">
@@ -123,7 +123,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
                   </svg>
                 </div>
-                <span className="text-[color:var(--text-light)]">123 Aloha Way, Honolulu, HI 96815</span>
+                <span className="text-[color:var(--text-light)]">1753-1799 Mount Cotton Rd, Cornubia, QLD 4130</span>
               </li>
               <li className="flex items-start">
                 <div className="w-8 h-8 rounded-full bg-[color:var(--primary-color)] flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
@@ -131,7 +131,7 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 5a2 2 0 012-2h3.28a1 1 0 01.948.684l1.498 4.493a1 1 0 01-.502 1.21l-2.257 1.13a11.042 11.042 0 005.516 5.516l1.13-2.257a1 1 0 011.21-.502l4.493 1.498a1 1 0 01.684.949V19a2 2 0 01-2 2h-1C9.716 21 3 14.284 3 6V5z" />
                   </svg>
                 </div>
-                <span className="text-[color:var(--text-light)]">(808) 555-1234</span>
+                <span className="text-[color:var(--text-light)]">(61) 415 793 573</span>
               </li>
               <li className="flex items-start">
                 <div className="w-8 h-8 rounded-full bg-[color:var(--primary-color)] flex items-center justify-center mr-3 mt-0.5 flex-shrink-0">
@@ -139,13 +139,13 @@ export default function Footer() {
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                   </svg>
                 </div>
-                <span className="text-[color:var(--text-light)]">info@aliiliau.com</span>
+                <span className="text-[color:var(--text-light)]">info@aliiluau.com</span>
               </li>
             </ul>
           </div>
 
           {/* Luau Schedule with Polynesian styling */}
-          <div>
+          {/*<div>
             <h4 className="font-heading text-lg font-semibold mb-4 text-[color:var(--secondary-light)] border-b border-[color:var(--primary-color)] pb-2">Luau Schedule</h4>
             <ul className="space-y-2">
               <li className="flex justify-between text-[color:var(--text-light)]">
@@ -178,6 +178,7 @@ export default function Footer() {
               </li>
             </ul>
           </div>
+          */}
         </div>
       </div>
 

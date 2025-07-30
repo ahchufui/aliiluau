@@ -64,7 +64,7 @@ body {
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl font-heading font-bold mb-6 text-[color:var(--primary-color)];
+    @apply text-3xl md:text-4xl font-heading font-bold mb-6 text-[color:var(--primary-dark)];
   }
   
   .section-subtitle {

@@ -22,13 +22,13 @@ export default function AboutPage() {
           <div className="text-center text-white">
             <h1 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold mb-4">Our Story</h1>
             <p className="text-xl md:text-2xl max-w-3xl mx-auto">
-              Celebrating Hawaiian culture and traditions since 1985
+              Celebrating Polynesian and Pacific Island culture and traditions.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Our History */}
+      {/* Our History 
       <section className="py-16 bg-white">
         <div className="container-custom">
           <div className="grid md:grid-cols-2 gap-12 items-center">
@@ -74,29 +74,29 @@ export default function AboutPage() {
               <h2 className="font-display text-3xl md:text-4xl font-bold mb-6 text-teal">Our Mission</h2>
               <p className="mb-4">
                 At AliʻiLuau, our mission is to preserve and share the authentic cultural heritage of 
-                Hawaii through immersive experiences that educate, entertain, and inspire our guests.
+                Polynesia and Pacific Islands through immersive experiences that educate, entertain, and inspire our guests.
               </p>
               <p className="mb-4">
                 We are committed to cultural authenticity in everything we do—from our traditional 
                 cooking methods and recipes to our music and dance performances that tell the stories 
-                of Hawaii's rich history.
+                of Polynesia and Pacific Islands rich history.
               </p>
               <p className="mb-4">
                 We believe that by sharing these traditions with visitors from around the world, we 
-                help ensure that Hawaiian cultural practices continue to thrive for generations to come.
+                help ensure that Polynesia and Pacific Island cultural practices continue to thrive for generations to come.
               </p>
             </div>
           </div>
         </div>
       </section>
 
-      {/* Our Team */}
+      {/* Our Team 
       <section className="py-16 bg-white">
         <div className="container-custom">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-12 text-center text-teal">Our ʻOhana (Family)</h2>
           
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {/* Team Member 1 */}
+            {/* Team Member 1 
             <div className="text-center">
               <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-4">
                 <div 
@@ -112,7 +112,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Team Member 2 */}
+            {/* Team Member 2 
             <div className="text-center">
               <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-4">
                 <div 
@@ -128,7 +128,7 @@ export default function AboutPage() {
               </p>
             </div>
 
-            {/* Team Member 3 */}
+            {/* Team Member 3 
             <div className="text-center">
               <div className="relative w-48 h-48 mx-auto rounded-full overflow-hidden mb-4">
                 <div 
@@ -154,13 +154,13 @@ export default function AboutPage() {
           
           <div className="max-w-3xl mx-auto">
             <p className="mb-6 text-center">
-              At AliʻiLuau, we are deeply committed to honoring and preserving Hawaiian culture. 
+              At AliʻiLuau, we are deeply committed to honoring and preserving Polynesian and Pacific culture. 
               We work closely with cultural practitioners and community elders to ensure that our 
               presentations are authentic, respectful, and educational.
             </p>
             
             <div className="grid md:grid-cols-2 gap-8 mt-12">
-              <div className="bg-white p-6 rounded-lg shadow-md">
+              {/*<div className="bg-white p-6 rounded-lg shadow-md">
                 <h3 className="font-display text-xl font-bold mb-4 text-orange">Community Support</h3>
                 <p>
                   We actively support local Hawaiian cultural education programs and donate a portion 
@@ -176,7 +176,7 @@ export default function AboutPage() {
                   (caring for the land). From locally sourced ingredients to eco-friendly operations, 
                   we strive to minimize our environmental impact.
                 </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
@@ -187,7 +187,7 @@ export default function AboutPage() {
         <div className="container-custom text-center">
           <h2 className="font-display text-3xl md:text-4xl font-bold mb-6">Experience Our Luau</h2>
           <p className="max-w-2xl mx-auto mb-8 text-lg">
-            Join us for an unforgettable evening of Hawaiian culture, cuisine, and entertainment. 
+            Join us for an unforgettable evening of Polynesian and Pacific culture, cuisine, and entertainment. 
             Book your visit to AliʻiLuau today!
           </p>
           <Link href="/booking" className="btn-secondary">Book Now</Link>

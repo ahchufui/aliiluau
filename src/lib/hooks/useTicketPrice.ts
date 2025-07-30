@@ -54,7 +54,7 @@ export function useTicketPrice() {
         
         // Set default price if there's an error
         setTicketPrice({
-          price: 60.00
+          price: 60
         });
       } finally {
         setIsLoading(false);

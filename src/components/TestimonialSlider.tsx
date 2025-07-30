@@ -13,7 +13,7 @@ type Testimonial = {
 };
 
 const testimonials: Testimonial[] = [
-  {
+  /*{
     id: 1,
     name: 'Sarah Johnson',
     location: 'Seattle, WA',
@@ -52,7 +52,7 @@ const testimonials: Testimonial[] = [
     quote: 'We brought our entire family, from grandparents to young children, and everyone had an amazing time. The interactive elements of the show were especially engaging for the kids.',
     rating: 5,
     image: '/images/testimonials/testimonial-5.jpg'
-  }
+  } */
 ];
 
 export default function TestimonialSlider() {

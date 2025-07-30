@@ -33,14 +33,14 @@ export async function GET(request: Request) {
         id: `session-${date}-evening`,
         time: '6:00 PM - 9:00 PM',
         availableSeats: Math.floor(Math.random() * 50) + 10,
-        price: 129.99
+        price: 60
       });
     } else if (day === 0) { // Sunday
       availableSessions.push({
         id: `session-${date}-evening`,
         time: '5:00 PM - 8:00 PM',
         availableSeats: Math.floor(Math.random() * 50) + 10,
-        price: 129.99
+        price: 60
       });
     }
     
@@ -97,17 +97,17 @@ export async function POST(request: Request) {
     const ticketTypes = {
       standard: {
         name: 'Standard Experience',
-        price: 60.00,
+        price: 60,
         description: 'Full luau experience with dinner and show'
       },
       vip: {
         name: 'VIP Experience',
-        price: 90.00,
+        price: 60,
         description: 'Premium seating, welcome drink, and photo opportunity with performers'
       },
       family: {
         name: 'Family Package',
-        price: 180.00,
+        price: 60,
         description: '2 adults and 2 children (ages 5-12)'
       }
     };
@@ -141,7 +141,7 @@ export async function POST(request: Request) {
         date,
         sessionId,
         tickets,
-        totalAmount: tickets.adults * 129.99 + tickets.children * 79.99,
+        totalAmount: tickets.adults * 60 + tickets.children * 60,
         customerInfo: {
           name,
           email,

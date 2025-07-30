@@ -27,7 +27,7 @@ const defaultTickets: TicketType[] = [
     id: '2',
     name: 'Premium Experience',
     description: 'Includes preferred seating, full Pacific Island buffet dinner, two drinks, and cultural performance',
-    price: 90,
+    price: 60,
     order: 2,
     isActive: false
   },
@@ -35,7 +35,7 @@ const defaultTickets: TicketType[] = [
     id: '3',
     name: 'VIP Royal Experience',
     description: 'Includes front-row seating, full Pacific Island buffet dinner, open bar, traditional greeting, souvenir photo, and cultural performance',
-    price: 120,
+    price: 60,
     order: 3,
     isActive: false
   }

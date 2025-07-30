@@ -88,7 +88,7 @@ export default function Home() {
       <section className="py-16 bg-ocean-blue-100">
         <div className="container-custom">
           <h2 className="section-title text-center">The AliʻiLuau Experience</h2>
-          <p className="text-center max-w-2xl mx-auto mb-8">Experience authentic Traditional Samoan Food Preparation and cultural immersion</p>
+          <p className="text-center max-w-2xl mx-auto mb-8">Experience authentic Traditional Polynesian Food Preparation and cultural immersion</p>
           
           {/* Featured Image */}
           <div className="max-w-2xl mx-auto mb-12">
@@ -109,7 +109,7 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-display font-semibold mb-3 text-center">Traditional Cuisine</h3>
               <p className="text-center">
-                Savor authentic Hawaiian dishes prepared using traditional methods, including kalua pig, poi, and haupia.
+                Savor authentic Polynesian dishes.
               </p>
             </div>
             <div className="bg-white p-6 rounded-lg shadow-md">
@@ -159,17 +159,17 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      <section className="py-16 bg-earth-100">
+      { /* <section className="py-16 bg-earth-100">
         <div className="container-custom">
           <h2 className="section-title text-center">Guest Experiences</h2>
           <TestimonialSlider />
         </div>
-      </section>
+      </section> */}
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-ocean-blue-700 text-white">
+      <section className="py-16 bg-ocean-blue-700 text-on-light">
         <div className="container-custom">
-          <h2 className="section-title text-center text-white">Stay Updated</h2>
+          <h2 className="section-title text-center">Stay Updated</h2>
           <p className="text-center max-w-2xl mx-auto mb-12">
             Subscribe to our newsletter for exclusive offers, upcoming events, and Hawaiian cultural insights.
           </p>

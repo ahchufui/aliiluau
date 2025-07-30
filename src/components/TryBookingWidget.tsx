@@ -82,7 +82,7 @@ export default function TryBookingWidget({
 
   // Get ticket price
   const getTicketPrice = () => {
-    return '$25.00 per person';
+    return '$60.00 per person';
   };
 
   if (isLoading) {
@@ -124,7 +124,7 @@ export default function TryBookingWidget({
             ) : (
               <>
                 <p className="text-xl font-bold text-teal-600">
-                  ${ticketPrice?.price?.toFixed(2) || '25.00'} per person
+                  ${ticketPrice?.price?.toFixed(2) || '60.00'} per person
                 </p>
                 <p className="text-sm text-gray-600">General Admission</p>
               </>
@@ -153,8 +153,7 @@ export default function TryBookingWidget({
         </div>
         
         <div className="mt-6 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg">
-          <p className="mb-2"><strong>Note:</strong> You will be redirected to our secure TryBooking platform to complete your reservation.</p>
-          <p>For group bookings of 10+ people, please contact us directly at <a href="mailto:bookings@aliiluau.com.au" className="text-teal-600 hover:underline">bookings@aliiluau.com.au</a></p>
+          <p><strong>Note:</strong> You will be redirected to our secure TryBooking platform to complete your reservation.</p>
         </div>
       </div>
     );
@@ -227,8 +226,7 @@ export default function TryBookingWidget({
       
       {/* Additional information */}
       <div className="mt-6 text-sm text-gray-600 bg-gray-50 p-4 rounded-lg">
-        <p className="mb-2"><strong>Note:</strong> You will be redirected to our secure TryBooking platform to complete your reservation.</p>
-        <p>For group bookings of 10+ people, please contact us directly at <a href="mailto:bookings@aliiluau.com.au" className="text-teal-600 hover:underline">bookings@aliiluau.com.au</a></p>
+        <p><strong>Note:</strong> You will be redirected to our secure TryBooking platform to complete your reservation.</p>
       </div>
     </div>
   );

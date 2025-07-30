@@ -3,7 +3,7 @@
     "id": "1",
     "name": "General Admission",
     "description": "Standard entry ticket for Ali'i Luau experience",
-    "price": 25,
+    "price": 60,
     "order": 1,
     "isActive": true
   }

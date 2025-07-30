@@ -144,7 +144,7 @@ export default function UpcomingEvents() {
                     <span>Loading price...</span>
                   ) : (
                     <span>
-                      <strong>${ticketPrice?.price?.toFixed(2) || '25.00'}</strong> per person
+                      <strong>${ticketPrice?.price?.toFixed(2) || '60.00'}</strong> per person
                     </span>
                   )}
                 </div>

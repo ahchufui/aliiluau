@@ -79,7 +79,7 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
                   About
                 </Link>
               </li>
-              <li>
+             {/* <li>
                 <Link 
                   href="/experience" 
                   className={`font-medium transition-all duration-300 relative py-2 px-3 ${pathname === '/experience' 
@@ -98,7 +98,7 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
                 >
                   Menu
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link 
                   href="/gallery" 
@@ -165,18 +165,6 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
                 className={`py-2 px-4 rounded-md ${pathname === '/about' ? 'bg-[color:var(--sand-light)] text-[color:var(--primary-color)] font-medium' : ''}`}
               >
                 About
-              </Link>
-              <Link 
-                href="/experience" 
-                className={`py-2 px-4 rounded-md ${pathname === '/experience' ? 'bg-[color:var(--sand-light)] text-[color:var(--primary-color)] font-medium' : ''}`}
-              >
-                Experience
-              </Link>
-              <Link 
-                href="/menu" 
-                className={`py-2 px-4 rounded-md ${pathname === '/menu' ? 'bg-[color:var(--sand-light)] text-[color:var(--primary-color)] font-medium' : ''}`}
-              >
-                Menu
               </Link>
               <Link 
                 href="/gallery" 

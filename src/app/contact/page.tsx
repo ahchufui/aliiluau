@@ -49,13 +49,13 @@ export default function ContactPage() {
               
               <div className="bg-sand-100 p-6 rounded-lg mb-8">
                 <h3 className="font-display text-xl font-bold mb-4 text-orange">Location</h3>
-                <p className="mb-2">123 Aloha Way</p>
-                <p className="mb-2">Honolulu, HI 96815</p>
-                <p className="mb-4">United States</p>
+                <p className="mb-2">1753-1799 Mount Cotton Rd, Cornubia</p>
+                <p className="mb-2">Brisbane, QLD 4130</p>
+                <p className="mb-4">Australia</p>
                 
                 <div className="aspect-w-16 aspect-h-9 mt-4">
                   <iframe 
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d59590.56733421272!2d-157.86053507832033!3d21.304567199999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x7c0073a2c4dacf7d%3A0xc2d3166f2d6a8e4!2sWaikiki%20Beach!5e0!3m2!1sen!2sus!4v1655430139096!5m2!1sen!2sus" 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2316.6576657665766!2d153.06666666666666!3d-27.466666666666666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6b91a4b4b4b4b4b4%3A0x6b91a4b4b4b4b4b4!2s1753-1799%20Mount%20Cotton%20Rd%2C%20Cornubia%2C%20QLD%204130!5e0!3m2!1sen!2sus!4v1655430139096!5m2!1sen!2sus" 
                     className="w-full h-64 rounded-md border-0" 
                     allowFullScreen 
                     loading="lazy"
@@ -71,24 +71,24 @@ export default function ContactPage() {
                     <svg className="w-5 h-5 mr-3 text-teal" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z" />
                     </svg>
-                    <span>(808) 555-1234</span>
+                    <span>(61)415 793 573</span>
                   </p>
                   <p className="flex items-center mb-2">
                     <svg className="w-5 h-5 mr-3 text-teal" fill="currentColor" viewBox="0 0 20 20">
                       <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
                       <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
                     </svg>
-                    <span>info@aliiliau.com</span>
+                    <span>info@aliiliau.com.au</span>
                   </p>
                 </div>
                 
                 <div>
                   <h3 className="font-display text-xl font-bold mb-2 text-orange">Luau Schedule</h3>
-                  <p className="mb-1">Wednesday: 6:00 PM - 9:00 PM</p>
+                 { /* <p className="mb-1">Wednesday: 6:00 PM - 9:00 PM</p>
                   <p className="mb-1">Friday: 6:00 PM - 9:00 PM</p>
                   <p className="mb-1">Saturday: 6:00 PM - 9:00 PM</p>
                   <p className="mb-1">Sunday: 5:00 PM - 8:00 PM</p>
-                  <p className="mt-4 italic">Closed Monday, Tuesday, and Thursday</p>
+                  <p className="mt-4 italic">Closed Monday, Tuesday, and Thursday</p> */}
                 </div>
                 
                 <div>
