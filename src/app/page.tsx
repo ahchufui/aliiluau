@@ -60,8 +60,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Additional dark overlay for better text contrast */}
-            <div className="absolute inset-0 bg-black opacity-40 z-[1]"></div>
+            {/* Hero content continues */}
             
             {/* Call to action buttons */}
             <div className="hidden md:block md:w-1/2 mt-8 md:mt-0 pl-8 flex justify-center items-center">
