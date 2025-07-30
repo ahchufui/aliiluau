@@ -39,20 +39,8 @@ export default function Home() {
                 backgroundSize: '24px 24px'
               }}>
           </div>
-          
-          {/* Decorative wave shape at bottom */}
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-0 z-20">
-            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none" 
-                className="relative block w-full h-12">
-              <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" 
-                    className="fill-white"></path>
-            </svg>
-          </div>
-          
-          {/* Content */}
           <div className="container-custom relative z-30 h-full flex flex-col md:flex-row justify-center items-center md:items-start text-white py-20">
-            {/* Text Content */}
-            <div className="animate-fadeIn md:w-1/2">
+            <div className="md:w-1/2 text-center md:text-left">
               <span className="inline-block py-1 px-3 rounded-full bg-[color:var(--secondary-color)]/20 text-[color:var(--secondary-color)] font-medium text-sm mb-6">
                 Authentic Pacific Island Experience
               </span>
@@ -71,6 +59,9 @@ export default function Home() {
                 </Link>
               </div>
             </div>
+
+            {/* Additional dark overlay for better text contrast */}
+            <div className="absolute inset-0 bg-black opacity-40 z-[1]"></div>
             
             {/* Call to action buttons */}
             <div className="hidden md:block md:w-1/2 mt-8 md:mt-0 pl-8 flex justify-center items-center">
@@ -89,13 +80,13 @@ export default function Home() {
         <div className="container-custom">
           <h2 className="section-title text-center">The AliʻiLuau Experience</h2>
           <p className="text-center max-w-2xl mx-auto mb-8">Experience authentic Traditional Polynesian Food Preparation and cultural immersion</p>
-          
+
           {/* Featured Image */}
           <div className="max-w-2xl mx-auto mb-12">
             <div className="relative w-full h-[400px] rounded-lg overflow-hidden shadow-xl transform hover:scale-[1.02] transition-transform duration-500">
               <Image 
-                src="/images/hero/Samoan-Food-Prep-Molly-NZ.webp" 
-                alt="Traditional Samoan Food Preparation" 
+                src="/images/hero/Samoan-Food-Prep-Molly-NZ.webp"
+                alt="Traditional Samoan Food Preparation"
                 fill
                 className="object-cover object-center"
                 sizes="(max-width: 768px) 100vw, 50vw"
@@ -159,7 +150,7 @@ export default function Home() {
       </section>
 
       {/* Testimonials Section */}
-      { /* <section className="py-16 bg-earth-100">
+      {/* <section className="py-16 bg-earth-100">
         <div className="container-custom">
           <h2 className="section-title text-center">Guest Experiences</h2>
           <TestimonialSlider />
@@ -180,5 +171,3 @@ export default function Home() {
     </TryBookingProvider>
   );
 }
-/ /   U p d a t e d   f o r   V e r c e l   d e p l o y m e n t  
- 
