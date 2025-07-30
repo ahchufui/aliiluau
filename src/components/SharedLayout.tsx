@@ -46,10 +46,16 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
-              {/* Logo with Polynesian styling */}
-              <div className="w-12 h-12 rounded-full overflow-hidden bg-[color:var(--accent-color)] flex items-center justify-center border-2 border-[color:var(--secondary-light)] shadow-md">
-                <span className="text-white font-bold text-lg">AL</span>
-              </div>
+              {/* Logo with image instead of text */}
+              <div 
+                className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center border-2 border-[color:var(--secondary-light)] shadow-md"
+                style={{ 
+                  backgroundImage: 'url("/logo.png")', 
+                  backgroundSize: 'cover',
+                  backgroundPosition: 'center'
+                }}
+                aria-label="Alii Luau Logo"
+              />
               <span className="font-bold text-2xl text-[color:var(--primary-dark)]">
                 AliʻiLuau<span className="text-[color:var(--secondary-color)]">.</span>
               </span>
