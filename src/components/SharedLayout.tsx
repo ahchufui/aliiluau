@@ -45,10 +45,10 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
         
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center">
-            <Link href="/" className="flex items-center space-x-2 hover:scale-105 transition-transform duration-300">
-              {/* Logo with image instead of text */}
+            <Link href="/" className="flex items-center hover:scale-105 transition-transform duration-300">
+              {/* Logo with image instead of text - bigger size and no text */}
               <div 
-                className="w-12 h-12 rounded-full overflow-hidden flex items-center justify-center border-2 border-[color:var(--secondary-light)] shadow-md"
+                className="w-20 h-20 rounded-full overflow-hidden flex items-center justify-center border-2 border-[color:var(--secondary-light)] shadow-md"
                 style={{ 
                   backgroundImage: 'url("/logo.png")', 
                   backgroundSize: 'cover',
@@ -56,9 +56,6 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
                 }}
                 aria-label="Alii Luau Logo"
               />
-              <span className="font-bold text-2xl text-[color:var(--primary-dark)]">
-                AliʻiLuau<span className="text-[color:var(--secondary-color)]">.</span>
-              </span>
             </Link>
           </div>
           

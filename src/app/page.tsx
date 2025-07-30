@@ -29,8 +29,8 @@ export default function Home() {
             />
           </div>
           
-          {/* Additional dark overlay for better text contrast */}
-          <div className="absolute inset-0 bg-black opacity-40 z-[1]"></div>
+          {/* Dark overlay for better text contrast - single overlay */}
+          <div className="absolute inset-0 bg-black opacity-30 z-[1]"></div>
           
           {/* Background pattern overlay */}
           <div className="absolute inset-0 opacity-10 z-10" 
