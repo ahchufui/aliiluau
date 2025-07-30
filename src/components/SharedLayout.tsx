@@ -47,14 +47,10 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
           <div className="flex items-center">
             <Link href="/" className="flex items-center hover:scale-105 transition-transform duration-300">
               {/* Logo with image instead of text - bigger size and no text */}
-              <div 
-                className="w-20 h-20 rounded-full overflow-hidden flex items-center justify-center border-2 border-[color:var(--secondary-light)] shadow-md"
-                style={{ 
-                  backgroundImage: 'url("/logo.png")', 
-                  backgroundSize: 'cover',
-                  backgroundPosition: 'center'
-                }}
-                aria-label="Alii Luau Logo"
+              <img 
+                src="/logo.png" 
+                alt="Alii Luau Logo"
+                className="w-24 h-auto" 
               />
             </Link>
           </div>
