@@ -157,7 +157,7 @@ export default function Home() {
       </section> */}
 
       {/* Newsletter Section */}
-      <section className="py-16 bg-ocean-blue-700 text-on-light">
+        {/*<section className="py-16 bg-ocean-blue-700 text-on-light">
         <div className="container-custom">
           <h2 className="section-title text-center">Stay Updated</h2>
           <p className="text-center max-w-2xl mx-auto mb-12">
@@ -165,7 +165,7 @@ export default function Home() {
           </p>
           <NewsletterSignup />
         </div>
-      </section>
+      </section>*/}
       </SharedLayout>
     </TryBookingProvider>
   );
