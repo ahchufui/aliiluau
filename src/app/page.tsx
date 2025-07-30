@@ -180,3 +180,5 @@ export default function Home() {
     </TryBookingProvider>
   );
 }
+/ /   U p d a t e d   f o r   V e r c e l   d e p l o y m e n t  
+ 
