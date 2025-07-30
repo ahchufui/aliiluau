@@ -46,11 +46,12 @@ export default function SharedLayout({ children }: SharedLayoutProps) {
         <div className="container-custom flex justify-between items-center">
           <div className="flex items-center">
             <Link href="/" className="flex items-center hover:scale-105 transition-transform duration-300">
-              {/* Logo with image instead of text - bigger size and no text */}
+              {/* Logo with image instead of text - full logo visible */}
               <img 
                 src="/logo.png" 
                 alt="Alii Luau Logo"
-                className="w-24 h-auto" 
+                className="h-32 w-auto" 
+                style={{ maxHeight: '80px' }}
               />
             </Link>
           </div>
