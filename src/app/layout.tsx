@@ -19,9 +19,9 @@ const montserrat = Montserrat({
 
 // Metadata for SEO
 export const metadata: Metadata = {
-  title: 'AliʻiLuau - Authentic Hawaiian Luau Experience',
-  description: 'Experience an authentic Hawaiian luau with traditional food, music, and dance performances at AliʻiLuau in Oahu, Hawaii.',
-  keywords: 'Hawaiian luau, Oahu luau, traditional Hawaiian food, Polynesian dance, Hawaii cultural experience',
+  title: 'AliʻiLuau - Authentic Polynesian and Pacific Luau Experience',
+  description: 'Experience an authentic Polynesian and Pacific luau with traditional food, music, and dance performances at AliʻiLuau in Oahu, Hawaii.',
+  keywords: 'Polynesian and Pacific luau, Oahu luau, traditional Polynesian and Pacific food, Polynesian dance, cultural experience',
 };
 
 export default function RootLayout({
