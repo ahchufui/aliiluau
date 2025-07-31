@@ -20,7 +20,7 @@ export default function TryBookingWidget({
   } | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const { ticketPrice, isLoading: isPriceLoading } = useTicketPrice();
+  const { ticketPrices, isLoading: isPriceLoading } = useTicketPrice();
 
   useEffect(() => {
     const fetchNextEvent = async () => {
@@ -80,9 +80,14 @@ export default function TryBookingWidget({
     fetchNextEvent();
   }, []);
 
-  // Get ticket price
+  // Format ticket prices from the tickets.json data
   const getTicketPrice = () => {
-    return '$60.00 per person';
+    if (!ticketPrices) return 'Tickets starting from $60.00';
+    
+    const adultPrice = ticketPrices.adultPrice.toFixed(2);
+    const childPrice = ticketPrices.childPrice.toFixed(2);
+    
+    return `$${adultPrice} per adult / $${childPrice} per child`;
   };
 
   if (isLoading) {
@@ -124,9 +129,9 @@ export default function TryBookingWidget({
             ) : (
               <>
                 <p className="text-xl font-bold text-teal-600">
-                  ${ticketPrice?.price?.toFixed(2) || '60.00'} per person
+                  ${ticketPrices?.adultPrice.toFixed(2) || '60.00'} per adult / ${ticketPrices?.childPrice.toFixed(2) || '40.00'} per child
                 </p>
-                <p className="text-sm text-gray-600">General Admission</p>
+                <p className="text-sm text-gray-600">Adult Admission</p>
               </>
             )}
           </div>

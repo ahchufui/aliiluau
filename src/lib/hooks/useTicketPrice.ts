@@ -1,85 +1,57 @@
 import { useState, useEffect } from 'react';
 import { TicketType } from '../types/ticket';
 
-type TicketPrice = {
-  price: number;
+type TicketPrices = {
+  adultPrice: number;
+  childPrice: number;
+  allTickets: TicketType[];
 };
 
 export function useTicketPrice() {
-  const [ticketPrice, setTicketPrice] = useState<TicketPrice | null>(null);
+  const [ticketPrices, setTicketPrices] = useState<TicketPrices | null>(null);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
-    const fetchTicketPrice = async () => {
+    const fetchTicketPrices = async () => {
       try {
-        // First check for active ticket in localStorage (set by admin dashboard)
-        const activeTicket = localStorage.getItem('activeTicket');
-        if (activeTicket) {
-          try {
-            const parsedTicket = JSON.parse(activeTicket);
-            setTicketPrice({
-              price: parsedTicket.price
-            });
-            setIsLoading(false);
-            return; // Use the admin-set ticket price
-          } catch (parseError) {
-            console.error('Error parsing active ticket:', parseError);
-            // Continue to try other methods
-          }
+        // Fetch tickets from the API route
+        const response = await fetch('/api/tickets');
+        
+        if (!response.ok) {
+          throw new Error('Failed to fetch tickets');
         }
         
-        // Try to fetch from API
-        try {
-          const response = await fetch('/api/tickets/active');
-          
-          if (response.ok) {
-            const data = await response.json();
-            setTicketPrice(data);
-            localStorage.setItem('activeTicket', JSON.stringify(data));
-            return;
-          }
-        } catch (apiError) {
-          console.error('Error fetching from API:', apiError);
-          // Continue to default price
-        }
+        const allTickets: TicketType[] = await response.json();
         
-        // Set default price if all else fails
-        setTicketPrice({
-          price: 60
+        // Find adult and child tickets
+        const adultTicket = allTickets.find(ticket => ticket.name.toLowerCase().includes('adult'));
+        const childTicket = allTickets.find(ticket => ticket.name.toLowerCase().includes('child'));
+        
+        setTicketPrices({
+          adultPrice: adultTicket?.price || 60,
+          childPrice: childTicket?.price || 40,
+          allTickets: allTickets
         });
       } catch (error) {
         console.error('Error in ticket price handling:', error);
-        setError('Failed to fetch ticket price');
+        setError('Failed to fetch ticket prices');
         
-        // Set default price if there's an error
-        setTicketPrice({
-          price: 60
+        // Set default prices if there's an error
+        setTicketPrices({
+          adultPrice: 60,
+          childPrice: 40,
+          allTickets: []
         });
       } finally {
         setIsLoading(false);
       }
     };
 
-    fetchTicketPrice();
+    fetchTicketPrices();
     
-    // Listen for storage events to update price when changed in admin
-    const handleStorageChange = (e: StorageEvent) => {
-      if (e.key === 'activeTicket' && e.newValue) {
-        try {
-          const parsedTicket = JSON.parse(e.newValue);
-          setTicketPrice({
-            price: parsedTicket.price
-          });
-        } catch (error) {
-          console.error('Error parsing updated ticket:', error);
-        }
-      }
-    };
-    
-    window.addEventListener('storage', handleStorageChange);
-    return () => window.removeEventListener('storage', handleStorageChange);
+    // No need to listen for storage events as we're reading directly from the file
   }, []);
 
-  return { ticketPrice, isLoading, error };
+  return { ticketPrices, isLoading, error };
 }

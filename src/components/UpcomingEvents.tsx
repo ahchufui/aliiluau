@@ -9,7 +9,7 @@ export default function UpcomingEvents() {
   const [events, setEvents] = useState<TrybookingEvent[]>([]);
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
-  const { ticketPrice, isLoading: isPriceLoading } = useTicketPrice();
+  const { ticketPrices, isLoading: isPriceLoading } = useTicketPrice();
 
   useEffect(() => {
     const fetchEvents = async () => {
@@ -144,7 +144,7 @@ export default function UpcomingEvents() {
                     <span>Loading price...</span>
                   ) : (
                     <span>
-                      <strong>${ticketPrice?.price?.toFixed(2) || '60.00'}</strong> per person
+                      <strong>${ticketPrices?.adultPrice.toFixed(2) || '60.00'}</strong> per adult / <strong>${ticketPrices?.childPrice.toFixed(2) || '40.00'}</strong> per child
                     </span>
                   )}
                 </div>
