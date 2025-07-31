@@ -39,7 +39,7 @@ export default function BookingPage({ searchParams }: { searchParams: { [key: st
             <div className="md:col-span-2">
               <h2 className="section-title text-ocean-blue-800 font-bold">Available Dates</h2>
               <p className="mb-8">
-                Select your preferred date and ticket options below. Our Pacific Island luau experiences typically run from 6:00 PM to 9:00 PM on selected dates.
+                Select your preferred date and ticket options below. Our Pacific Island luau experiences typically run from 5:00 PM to 8:00 PM on selected dates.
               </p>
               
               {/* Trybooking Integration Component */}
