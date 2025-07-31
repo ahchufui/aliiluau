@@ -1,4 +1,5 @@
 import Link from 'next/link';
+import GovernmentAcknowledgement from './GovernmentAcknowledgement';
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -17,6 +18,13 @@ export default function Footer() {
         }} />
       </div>
       
+      {/* Queensland Government Acknowledgement */}
+      <div className="bg-[color:var(--primary-dark)] py-8 border-t border-[color:var(--primary-darker)]">
+        <div className="container-custom">
+          <GovernmentAcknowledgement />
+        </div>
+      </div>
+
       {/* Main Footer */}
       <div className="container-custom pt-16 pb-12">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -181,6 +189,8 @@ export default function Footer() {
           */}
         </div>
       </div>
+
+      
 
       {/* Copyright with Polynesian styling */}
       <div className="bg-[color:var(--primary-darker)] py-6 relative">
