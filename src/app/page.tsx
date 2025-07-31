@@ -65,7 +65,7 @@ export default function Home() {
             {/* Call to action buttons */}
             <div className="hidden md:block md:w-1/2 mt-8 md:mt-0 pl-8 flex justify-center items-center">
               <div className="text-center">
-                <h2 className="text-3xl font-bold mb-6">Join Us Today</h2>
+                <h2 className="text-3xl font-bold mb-6">Join Us Today 50% off!</h2>
                 <Link href="/booking" className="btn-primary text-xl px-10 py-4 rounded-lg shadow-lg hover:shadow-xl transition-all">
                   Reserve Your Experience
                 </Link>
