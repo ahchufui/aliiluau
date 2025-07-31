@@ -21,7 +21,7 @@ export default function BookingPage({ searchParams }: { searchParams: { [key: st
     <TryBookingProvider eventId={eventId}>
       <SharedLayout>
       {/* Hero Section */}
-      <section className="bg-ocean-blue-800 text-white py-16">
+      <section className="bg-ocean-blue-800 text-teal py-16">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-center text-white drop-shadow-lg">
             Book Your AliʻiLuau Experience
