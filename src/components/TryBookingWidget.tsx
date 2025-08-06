@@ -21,12 +21,14 @@ export default function TryBookingWidget({
   const [isLoading, setIsLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
   const { ticketPrices, isLoading: isPriceLoading } = useTicketPrice();
+  const [refreshKey, setRefreshKey] = useState(0); // Add a refresh key state
 
   useEffect(() => {
     const fetchNextEvent = async () => {
       try {
         setIsLoading(true);
-        const response = await fetch('/api/trybooking/events');
+        // Add cache-busting parameter to prevent caching
+        const response = await fetch(`/api/trybooking/events?_=${new Date().getTime()}`);
         
         if (!response.ok) {
           const errorData = await response.json();
@@ -34,6 +36,8 @@ export default function TryBookingWidget({
         }
         
         const events: TrybookingEvent[] = await response.json();
+        console.log('TryBookingWidget received events:', events);
+        
         if (!events || events.length === 0) {
           setError('No upcoming events available');
           return;
@@ -78,17 +82,17 @@ export default function TryBookingWidget({
     };
 
     fetchNextEvent();
-  }, []);
+  }, [refreshKey]); // Add refreshKey to dependency array
 
-  // Get ticket price
- const getTicketPrice = () => {
-  if (!ticketPrices) return 'Tickets starting from $60.00';
-  
-  const adultPrice = ticketPrices.adultPrice.toFixed(2);
-  const childPrice = ticketPrices.childPrice.toFixed(2);
-  
-  return `$${adultPrice} per adult / $${childPrice} per child`;
-};
+  // Format ticket prices from the tickets.json data
+  const getTicketPrice = () => {
+    if (!ticketPrices) return 'Tickets starting from $60.00';
+    
+    const adultPrice = ticketPrices.adultPrice.toFixed(2);
+    const childPrice = ticketPrices.childPrice.toFixed(2);
+    
+    return `$${adultPrice} per adult / $${childPrice} per child`;
+  };
 
   if (isLoading) {
     return (
@@ -131,7 +135,7 @@ export default function TryBookingWidget({
                 <p className="text-xl font-bold text-teal-600">
                   ${ticketPrices?.adultPrice.toFixed(2) || '60.00'} per adult / ${ticketPrices?.childPrice.toFixed(2) || '40.00'} per child
                 </p>
-                <p className="text-sm text-gray-600">General Admission</p>
+                <p className="text-sm text-gray-600">Adult Admission</p>
               </>
             )}
           </div>
@@ -169,8 +173,25 @@ export default function TryBookingWidget({
   const bookingUrl = `https://www.trybooking.com/${event.eventCode}?session=${session.id}`;
   const eventId = event.eventId.toString(); // Get the event ID for this specific event
 
+  // Function to handle manual refresh
+    {/*
+  const handleRefresh = () => {
+    console.log('Manually refreshing TryBooking data...');
+    setRefreshKey(prev => prev + 1); // Increment refresh key to trigger useEffect
+  };
+*/}
   return (
     <div className={`w-full ${className}`}>
+      {/* <div className="flex justify-between items-center mb-4">
+        <h2 className="text-2xl font-semibold">Upcoming Events</h2>
+        <button 
+         {/* onClick={handleRefresh} 
+          className="text-sm bg-teal-600 hover:bg-teal-700 text-white py-1 px-3 rounded-md flex items-center"
+          disabled={isLoading}
+        >
+          {isLoading ? 'Refreshing...' : 'Refresh Data'}
+        </button>
+      </div> */}  
       {/* Event details */}
       <div className="mb-6 grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="flex items-center p-3 bg-ocean-blue-50 rounded-lg">
