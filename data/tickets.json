@@ -3,7 +3,7 @@
     "id": "1",
     "name": "Adult Admission",
     "description": "Adult entry ticket for Ali'i Luau experience soft opening night",
-    "price": 60,
+    "price": 90,
     "order": 1,
     "isActive": true
   },
@@ -11,7 +11,7 @@
     "id": "2",
     "name": "Child Admission",
     "description": "Child entry ticket for Ali'i Luau experience soft opening night",
-    "price": 40,
+    "price": 60,
     "order": 2,
     "isActive": true
   } 
