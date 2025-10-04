@@ -17,8 +17,8 @@ export default function GovernmentAcknowledgement({ className = '' }: Government
         <div className="flex flex-col items-center md:items-start gap-4">
           <div className="min-w-[180px] min-h-[60px] relative">
             <Image 
-              src="/images/branding/qld-coa-logo.png"
-              alt="Queensland Government Coat of Arms"
+              src="/images/branding/logan-city-logo.png"
+              alt="Logan City Council Logo"
               width={180}
               height={60}
               style={{ objectFit: 'contain' }}
@@ -27,7 +27,7 @@ export default function GovernmentAcknowledgement({ className = '' }: Government
           </div>
           <div className="text-sm text-white">
             <p className="mb-2">
-              This project is proudly supported by the Queensland Government.
+              This project is proudly supported by Logan City Council
             </p>
             <p>
               <Link 
@@ -46,8 +46,8 @@ export default function GovernmentAcknowledgement({ className = '' }: Government
         <div className="flex flex-col items-center md:items-start gap-4">
           <div className="min-w-[200px] min-h-[50px] relative">
             <Image 
-              src="/images/branding/logan-city-logo.png"
-              alt="Logan City Council Logo"
+              src="/images/branding/qld-coa-logo.png"
+              alt="Queensland Government Coat of Arms"
               width={200}
               height={50}
               style={{ objectFit: 'contain' }}
@@ -56,7 +56,7 @@ export default function GovernmentAcknowledgement({ className = '' }: Government
           </div>
           <div className="text-sm text-white">
             <p className="mb-2">
-              This project is proudly supported by Logan City Council.
+              This project is proudly supported by the Queensland Government.
             </p>
             <p>
               <Link 
