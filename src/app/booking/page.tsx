@@ -21,7 +21,7 @@ export default function BookingPage({ searchParams }: { searchParams: { [key: st
     <TryBookingProvider eventId={eventId}>
       <SharedLayout>
       {/* Hero Section */}
-      <section className="bg-ocean-blue-800 text-white py-16">
+      <section className="bg-ocean-blue-800 text-teal py-16">
         <div className="container-custom">
           <h1 className="text-4xl md:text-5xl font-display font-bold mb-4 text-center text-white drop-shadow-lg">
             Book Your AliʻiLuau Experience
@@ -39,7 +39,7 @@ export default function BookingPage({ searchParams }: { searchParams: { [key: st
             <div className="md:col-span-2">
               <h2 className="section-title text-ocean-blue-800 font-bold">Available Dates</h2>
               <p className="mb-8">
-                Select your preferred date and ticket options below. Our Pacific Island luau experiences typically run from 6:00 PM to 9:00 PM on selected dates.
+                Select your preferred date and ticket options below. Our Pacific Island luau experiences typically run from 4:30 PM to 7:30 PM on selected dates.
               </p>
               
               {/* Trybooking Integration Component */}
