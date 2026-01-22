@@ -142,14 +142,19 @@ export const TryBookingProvider = ({ children, eventId }: TryBookingProviderProp
       setIsLoading(true);
       setError(null);
       
-      // Make a real API call to fetch event data
-      const response = await fetch(`/api/trybooking/events/${id}`);
+      // Make a real API call to fetch event data with cache-busting parameter
+      const cacheBuster = new Date().getTime();
+      const response = await fetch(`/api/trybooking/events/${id}?_=${cacheBuster}`);
       
       if (!response.ok) {
         throw new Error(`Failed to fetch event data: ${response.status}`);
       }
       
       const eventData = await response.json();
+      
+      // Debug log to see what data is being received
+      console.log('TryBooking API response:', eventData);
+      console.log('Session list from API:', eventData.sessionList);
       
       // Process session data to add availability status
       const processedSessions = eventData.sessionList.map((session: any) => {
@@ -188,7 +193,12 @@ export const TryBookingProvider = ({ children, eventId }: TryBookingProviderProp
   
   // Function to refresh event data
   const refreshEventData = async () => {
+    console.log('Refreshing TryBooking event data...');
     if (eventId) {
+      // Clear any cached data
+      setEventDetails(null);
+      setSessions([]);
+      // Fetch fresh data
       await fetchEventData(eventId);
     }
   };

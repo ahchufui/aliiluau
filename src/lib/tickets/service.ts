@@ -18,7 +18,7 @@ const defaultTickets: TicketType[] = [
   {
     id: '1',
     name: 'General Admission',
-    description: 'Includes full Pacific Island buffet dinner, welcome drink, and cultural performance',
+    description: 'Includes full Pacific Island buffet dinner and cultural performance',
     price: 60,
     order: 1,
     isActive: true
